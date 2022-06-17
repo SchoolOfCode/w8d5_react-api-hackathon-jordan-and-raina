@@ -37,29 +37,28 @@ function App() {
     );
     const data = await response.json();
     const searchResults = data;
-    
+
     // if (data.error === "404){
     //   setResults("Card not found")
     // };
-    
+
     setResults(searchResults);
     console.log(results);
   }
-  
 
   return (
-    <div className="App">
-    <h1>
-      Hearthstone Cards
-    </h1>
-      <div id="ResultsList">
-        <SearchBar
-          searchByUserInput={searchByUserInput}
-          buttonText={"search"}
-        />
+    <body>
+      <div className="App">
+        <img src="https://images.squarespace-cdn.com/content/v1/529d23d2e4b0c7dd8c183826/1397776791128-WGUOWDAVLSFRF0JJBOC4/Hearthstone_Logo.png"/>
+        <div id="ResultsList">
+          <SearchBar
+            searchByUserInput={searchByUserInput}
+            buttonText={"search"}
+          />
+        </div>
+        <DisplayResults results={results} />
       </div>
-      <DisplayResults results={results}/>
-    </div>
+    </body>
   );
 }
 

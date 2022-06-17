@@ -2,12 +2,20 @@ import React from 'react'
 
 
  function DisplayResults({results}) {
-  let resultsArray = [...results]
-  return (
+  console.log(results)
+    return (
     <div>
-      <p>
-      {resultsArray}
-      </p>
+      <ul>
+      {results.map((item) => {
+        return (
+          <div>
+          {item.img? <img src ={item.img} alt={item.name}/> : <></> }
+          {item.img? <h4> {item.name}</h4> : <p></p> }
+          </div>
+        )
+      })
+      }
+      </ul>
     </div>
   )
 }

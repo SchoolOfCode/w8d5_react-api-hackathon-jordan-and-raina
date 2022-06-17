@@ -4,19 +4,19 @@ import SearchBar from "../SearchByCard";
 import DisplayResults from "../DisplayResults/Index";
 
 const testResults = [
-  {
-    cardId: "TB_BaconShop_HERO_53",
-    dbfId: "60370",
-    name: "Ysera",
-    cardSet: "Battlegrounds",
-    type: "Hero",
-    faction: "Neutral",
-    health: 40,
-    playerClass: "Neutral",
-    img: "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/04015b4f36a332ad359d494e7cf095fc05e90f6f34487be0130b330631b38251.png",
-    imgGold:
-      "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/ac4694f6807fa55c2698b0d7b00a325cc54528ba6525f8b18084e6222f233404.png",
-  },
+  // {
+  //   cardId: "TB_BaconShop_HERO_53",
+  //   dbfId: "60370",
+  //   name: "Ysera",
+  //   cardSet: "Battlegrounds",
+  //   type: "Hero",
+  //   faction: "Neutral",
+  //   health: 40,
+  //   playerClass: "Neutral",
+  //   img: "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/04015b4f36a332ad359d494e7cf095fc05e90f6f34487be0130b330631b38251.png",
+  //   imgGold:
+  //     "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/ac4694f6807fa55c2698b0d7b00a325cc54528ba6525f8b18084e6222f233404.png",
+  // },
 ];
 
 const options = {
@@ -43,6 +43,9 @@ function App() {
 
   return (
     <div className="App">
+    <h1>
+      Hearthstone Cards
+    </h1>
       <div id="ResultsList">
         <SearchBar
           searchByUserInput={searchByUserInput}

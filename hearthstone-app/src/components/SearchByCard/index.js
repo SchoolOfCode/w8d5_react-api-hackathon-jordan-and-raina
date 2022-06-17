@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 
-function SearchBar() {
+function SearchBar({searchByUserInput, buttonText}) {
   
   const [ input, setInput ] = useState("")  
 
@@ -12,7 +12,8 @@ function SearchBar() {
   }
 
   function handleClick() {
-    
+    searchByUserInput(input);
+    setInput("");
     
   }
 
@@ -20,7 +21,7 @@ function SearchBar() {
 
   return (
     <section>
-      <input value={state} onChange={handleInput} />
+      <input value={input} onChange={handleInput} />
       <button className="" onClick={handleClick}>
         {buttonText}
       </button>

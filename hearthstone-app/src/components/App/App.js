@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import SearchBar from "../SearchByCard";
 
 const testResults = [
   {
@@ -18,34 +19,34 @@ const testResults = [
 ];
 
 const options = {
-  method: 'GET',
+  method: "GET",
   headers: {
-      'X-RapidAPI-Key': '984be2a920mshe6ae60ceea01d08p12a336jsnc11fcc90a8d6',
-      'X-RapidAPI-Host': 'omgvamp-hearthstone-v1.p.rapidapi.com'
-  }
-  };
-
+    "X-RapidAPI-Key": "984be2a920mshe6ae60ceea01d08p12a336jsnc11fcc90a8d6",
+    "X-RapidAPI-Host": "omgvamp-hearthstone-v1.p.rapidapi.com",
+  },
+};
 
 function App() {
   const [results, setResults] = useState(testResults);
 
   async function searchByUserInput(searchedText) {
     const response = await fetch(
-      `https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/search/${searchedText}`, options
+      `https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/search/${searchedText}`,
+      options
     );
     const data = await response.json();
     const searchResults = data;
     setResults(searchResults);
-  };
-
-
+    console.log(results);
+  }
 
   return (
     <div className="App">
       <div id="ResultsList">
-        <p>
-      
-        </p>
+        <SearchBar
+          searchByUserInput={searchByUserInput}
+          buttonText={"search"}
+        />
       </div>
     </div>
   );

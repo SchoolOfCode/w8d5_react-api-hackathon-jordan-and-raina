@@ -1,0 +1,30 @@
+Step 1: 
+-   Decide on an API to use 
+-   Create react app and install dependencies
+    -   express (for server routes)
+    -   nodemon (for instant refreshing of server and troubleshooting)
+    -   react (obviously)
+
+Step 2: What we want to build
+
+Hearthstone API
+
+Routes:
+-   Get all cards 👍
+-   Get cards by
+    -   Class 👍
+    -   Race
+    -   Type
+    -   Sets 👍
+-   Get card by name search 👍
+
+Step 3: Create a low fidelity wireframe
+-   Miro board to design the landing page
+    -   Search bar (input)
+    -   Results box (display)
+
+Step 4: Creating the react side of the app
+-   Creating components
+    -   Search function
+    -   Display function
+

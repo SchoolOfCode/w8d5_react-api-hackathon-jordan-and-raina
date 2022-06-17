@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
 
-/*
-   function to 
-*/
 
 function SearchBar() {
   
@@ -17,8 +14,9 @@ function SearchBar() {
   function handleClick() {
     
     
-    setInput();
   }
+
+
 
   return (
     <section>

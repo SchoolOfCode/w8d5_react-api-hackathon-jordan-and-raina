@@ -17,22 +17,35 @@ const testResults = [
   },
 ];
 
+const options = {
+  method: 'GET',
+  headers: {
+      'X-RapidAPI-Key': '984be2a920mshe6ae60ceea01d08p12a336jsnc11fcc90a8d6',
+      'X-RapidAPI-Host': 'omgvamp-hearthstone-v1.p.rapidapi.com'
+  }
+  };
+
+
 function App() {
   const [results, setResults] = useState(testResults);
 
-  useEffect(async () => {
+  async function searchByUserInput(searchedText) {
     const response = await fetch(
-      "https://omgvamp-hearthstone-v1.p.rapidapi.com/cards"
+      `https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/search/${searchedText}`, options
     );
     const data = await response.json();
-    const [cards] = data.results;
-    setResults(cards);
-  });
+    const searchResults = data;
+    setResults(searchResults);
+  };
+
+
 
   return (
     <div className="App">
       <div id="ResultsList">
-        <p>{cards}</p>
+        <p>
+      
+        </p>
       </div>
     </div>
   );

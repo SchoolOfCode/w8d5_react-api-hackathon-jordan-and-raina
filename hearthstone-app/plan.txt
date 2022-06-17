@@ -9,6 +9,33 @@ Step 2: What we want to build
 
 Hearthstone API
 
+
+Use a piece of state that will store needed date.
+
+Within a useEffect/or other handler, fetch data and store the data in your piece of state.
+The useEffect/or other handler should only re-run when the id changes. 
+
+Example code 
+            const fetch = require('node-fetch');
+
+            const url = 'https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/search/';
+
+            const options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': '984be2a920mshe6ae60ceea01d08p12a336jsnc11fcc90a8d6',
+                'X-RapidAPI-Host': 'omgvamp-hearthstone-v1.p.rapidapi.com'
+            }
+            };
+
+            fetch(url, options)
+                .then(res => res.json())
+                .then(json => console.log(json))
+                .catch(err => console.error('error:' + err));
+
+
+
+
 Fetch functions:
 -   Get all cards 👍
 -   Get cards by
@@ -25,6 +52,19 @@ Step 3: Create a low fidelity wireframe
 
 Step 4: Creating the react side of the app
 -   Creating components
-    -   Search function
+
+If all state app.js
+    - Class search 
+    - Text box search 
+    - etc 
+    
+
+    -   Search function 
+        - Create componenet
+            - use its own state 
+            - renders the search bar
+            - handles the searched content
+
+
     -   Display function
 

@@ -37,15 +37,15 @@ function App() {
     );
     const data = await response.json();
     const searchResults = data;
-    if (data.error = "404"){
-      results = data.message;
-    };
-    else{
-    }
+    
+    // if (data.error === "404){
+    //   setResults("Card not found")
+    // };
+    
     setResults(searchResults);
     console.log(results);
   }
-  }
+  
 
   return (
     <div className="App">

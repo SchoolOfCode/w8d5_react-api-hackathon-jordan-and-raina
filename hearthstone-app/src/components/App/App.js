@@ -37,8 +37,14 @@ function App() {
     );
     const data = await response.json();
     const searchResults = data;
+    if (data.error = "404"){
+      results = data.message;
+    };
+    else{
+    }
     setResults(searchResults);
     console.log(results);
+  }
   }
 
   return (

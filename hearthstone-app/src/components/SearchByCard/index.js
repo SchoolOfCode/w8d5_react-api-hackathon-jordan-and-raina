@@ -11,7 +11,7 @@ function SearchBar({searchByUserInput, buttonText}) {
     setInput(value);
   }
 
-  function handleClick() {
+   function handleClick() {
     searchByUserInput(input);
     setInput("");
     

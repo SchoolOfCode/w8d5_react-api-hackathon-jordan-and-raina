@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import SearchBar from "../SearchByCard";
+import DisplayResults from "../DisplayResults/Index";
 
 const testResults = [
   {
@@ -48,6 +49,7 @@ function App() {
           buttonText={"search"}
         />
       </div>
+      <DisplayResults results={results}/>
     </div>
   );
 }

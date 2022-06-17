@@ -1,7 +1,15 @@
 import React from 'react'
 
-export default function Index() {
+
+ function DisplayResults({results}) {
+  let resultsArray = [...results]
   return (
-    <div>Index</div>
+    <div>
+      <p>
+      {resultsArray}
+      </p>
+    </div>
   )
 }
+
+export default DisplayResults;

@@ -1,15 +1,15 @@
-Step 1: 
--   Decide on an API to use 
+Step 1:  
+-   Decide on an API to use  - Hearthstone 
 -   Create react app and install dependencies
-    -   express (for server routes)
-    -   nodemon (for instant refreshing of server and troubleshooting)
-    -   react (obviously)
+    -   express (for server routes)  - DON'T NEED 
+    -   nodemon (for instant refreshing of server and troubleshooting) - DON'T NEED  
+    -   react (obviously) 
 
 Step 2: What we want to build
 
 Hearthstone API
 
-Routes:
+Fetch functions:
 -   Get all cards 👍
 -   Get cards by
     -   Class 👍
